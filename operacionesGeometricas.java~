@@ -1,0 +1,56 @@
+//para agrupar en el paquete y poder usar las clases de otros directorios
+package java2_operacionesGeometricas;
+
+import java.util.Scanner;
+//para importar y poder usar las clases de operacionesCuadrado
+import java2_operacionesGeometricas.com.zubiri.geometria.java2_operacionesCuadrado.src.*;
+// para importar y poder usar las clases de operacionesCirculo
+import java2_operacionesGeometricas.com.zubiri.geometria.java2_operacionesCirculoget.src.*;
+
+
+
+public class operacionesGeometricas {
+
+	public static void main(String[] args) 
+	{
+
+		String tipo = new String("circulo");
+
+		Scanner sc = new Scanner(System.in);
+		System.out.print("\nIngresa el nombre de la figura (cuadrado / circulo) ");
+		System.out.print("\n ");
+
+		
+		tipo = sc.nextLine();
+		System.out.print("ha elegido "+ tipo);
+		System.out.print("\n ");
+          
+
+
+		
+	//comprara la variable tipo para saber que numero se ha introducido (ya puede ser usado operacionesCuadrado y operacionesCirculo
+	//por que ya sido importados)
+
+		if (tipo.equals( "cuadrado" ) | tipo.equals( "CUADRADO" )| tipo.equals( "Cuadrado"))
+		{
+			OperacionesCuadrado operacion = new OperacionesCuadrado();
+			operacion.main();
+		}
+
+		else if (tipo.equals( "circulo" ) )
+		{		
+			operacionesCirculo operacionn = new operacionesCirculo();
+			operacionn.main();
+		}
+		else 
+		{ 
+			System.out.print("no esta disponible esta figura geometrica ");
+			System.out.print("\n ");
+		}
+	}
+}
+
+
+
+		
+
